@@ -2,3 +2,9 @@
 body {
   background-color: #A4A4A4;
 }
+.head-back {
+  background-image: url("../img/ai_yuzuki.jpg");
+  width: 100%;
+  height: 200px;
+  background-repeat: no-repeat;
+}
