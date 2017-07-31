@@ -41,6 +41,8 @@ class Controller_Base extends Controller_Template
   {
     //header.phpをテンプレートの$headerとbindさせる。
     $this->template->header = View::forge('base/' . $this->agent . 'header', $this->base_data);
+    //metas.phpをテンプレートの$metasとbindさせる。
+    $this->template->metas = View::forge('base/' . $this->agent . 'metas', $this->base_data);
     //footer.phpをテンプレートの$side_menuとbindさせる。
     $this->template->side_menu = View::forge('base/' . $this->agent . 'side_menu', $this->base_data);
     //footer.phpをテンプレートの$footerとbindさせる。

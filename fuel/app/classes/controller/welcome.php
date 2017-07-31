@@ -29,8 +29,7 @@ class Controller_Welcome extends Controller_Base
 	 */
 	public function action_index()
 	{
-		$this->template->metas = View::forge('base/metas');
-		$this->template->content = View::forge('home/index');
+		$this->template->content = View::forge('home/' . $this->agent . 'index');
 	}
 
 	/**
