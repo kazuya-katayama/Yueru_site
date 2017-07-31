@@ -1,3 +1,1 @@
-<div>
-    <?php echo "header"; ?>
-</div>
+<img src='assets/img/ai_yuzuki.jpg' class="head-back img-responsive"/>
