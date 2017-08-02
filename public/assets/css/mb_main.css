@@ -1,9 +1,18 @@
+/*--Yueru_site--*/
+
 /*--基本--*/
+html {
+  
+}
+
 body {
   background-color: #A4A4A4;
+  margin: 5px 10px 5px 5px;
+  font-size: 15px;
 }
+
+/*--header基本--*/
 .head-back {
-  background-image: url("../img/ai_yuzuki.jpg");
   width: 100%;
   height: 200px;
   background-repeat: no-repeat;
