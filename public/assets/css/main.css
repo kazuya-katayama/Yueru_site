@@ -6,10 +6,14 @@ body {
   margin: 0 10px 5px 5px;
 }
 
-/*--基本--*/
-.head-img1 {
-  background-image: url("../img/ai_yuzuki.jpg");
+/*--header基本--*/
+.head-img-group {
   width: 100%;
+  height: 150px;
+
+}
+.head-img1 {
+  width: 20%;
   height: 150px;
   background-repeat: no-repeat;
   max-width: 800px; /* 最大幅 */
@@ -17,8 +21,7 @@ body {
 }
 
 .head-img2 {
-  background-image: url("../img/ai_yuzuki.jpg");
-  width: 100%;
+  width: 60%;
   height: 150px;
   background-repeat: no-repeat;
   max-width: 800px; /* 最大幅 */
