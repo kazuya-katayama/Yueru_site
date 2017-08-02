@@ -2,18 +2,23 @@
 
 /*--基本--*/
 html {
-  
+
 }
 
 body {
-  background-color: #A4A4A4;
+  background-color: #E0F2F7;
   margin: 5px 10px 5px 5px;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 /*--header基本--*/
-.head-back {
-  width: 100%;
+.head-back1 {
+  width: 45%;
+  height: 200px;
+  background-repeat: no-repeat;
+}
+.head-back2 {
+  width: 45%;
   height: 200px;
   background-repeat: no-repeat;
 }
