@@ -18,9 +18,11 @@
               <?php echo $content; ?>
             </div>
         <?php //side_menu.phpを読み込み ?>
-        <!--side_menu-->
-        <?php echo $side_menu; ?>
-        <!--//side_menu-->
+        <?php if (isset($side_menu)) {?>
+          <!--side_menu-->
+          <?php echo $side_menu; ?>
+          <!--//side_menu-->
+        <?php } ?>
         <?php //side_menu.phpを読み込み ?>
         <!--footer-->
         <?php echo $footer; ?>

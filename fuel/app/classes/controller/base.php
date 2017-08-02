@@ -43,8 +43,10 @@ class Controller_Base extends Controller_Template
     $this->template->header = View::forge('base/' . $this->agent . 'header', $this->base_data);
     //metas.phpをテンプレートの$metasとbindさせる。
     $this->template->metas = View::forge('base/' . $this->agent . 'metas', $this->base_data);
-    //footer.phpをテンプレートの$side_menuとbindさせる。
-    $this->template->side_menu = View::forge('base/' . $this->agent . 'side_menu', $this->base_data);
+    if ($this->agent == '') {
+      //footer.phpをテンプレートの$side_menuとbindさせる。
+      $this->template->side_menu = View::forge('base/' . $this->agent . 'side_menu', $this->base_data);
+    }
     //footer.phpをテンプレートの$footerとbindさせる。
     $this->template->footer = View::forge('base/' . $this->agent . 'footer', $this->base_data);
 
