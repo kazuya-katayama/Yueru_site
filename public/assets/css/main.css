@@ -1,9 +1,22 @@
+/*--Yueru_site--*/
+
 /*--基本--*/
 body {
   background-color: #A4A4A4;
   margin: 0 10px 5px 5px;
 }
-.head-back2 {
+
+/*--基本--*/
+.head-img1 {
+  background-image: url("../img/ai_yuzuki.jpg");
+  width: 100%;
+  height: 150px;
+  background-repeat: no-repeat;
+  max-width: 800px; /* 最大幅 */
+  min-width: 240px; /* 最小幅 */
+}
+
+.head-img2 {
   background-image: url("../img/ai_yuzuki.jpg");
   width: 100%;
   height: 150px;
