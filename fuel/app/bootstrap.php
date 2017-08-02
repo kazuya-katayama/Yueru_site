@@ -20,6 +20,6 @@ require COREPATH.'bootstrap.php';
  * Fuel::PRODUCTION
  */
 \Fuel::$env = \Arr::get($_SERVER, 'FUEL_ENV', \Arr::get($_ENV, 'FUEL_ENV', \Fuel::DEVELOPMENT));
-
+require APPPATH.'/config/'.Fuel::$env.'/constant.php' ;
 // Initialize the framework with the config file.
 \Fuel::init('config.php');

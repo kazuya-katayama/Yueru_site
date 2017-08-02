@@ -29,3 +29,4 @@ docs/
 /fuel/app/tmp/*
 /public/sitemap.xml
 /public/robots.txt
+/fuel/app/bootstrap.php

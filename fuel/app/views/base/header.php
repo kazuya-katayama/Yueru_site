@@ -1,1 +1,3 @@
-<img src='assets/img/ai_yuzuki.jpg' class="head-back img-responsive"/>
+<div>
+<img src='assets/img/ai_yuzuki.jpg' class="head-back2"/>
+</div>
