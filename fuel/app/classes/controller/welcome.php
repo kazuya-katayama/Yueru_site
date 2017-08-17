@@ -29,19 +29,12 @@ class Controller_Welcome extends Controller_Base
 	 */
 	public function action_index()
 	{
-		$this->template->content = View::forge('home/' . $this->agent . 'index');
-	}
-
-	/**
-	 * A typical "Hello, Bob!" type example.  This uses a Presenter to
-	 * show how to use them.
-	 *
-	 * @access  public
-	 * @return  Response
-	 */
-	public function action_hello()
-	{
-		return Response::forge(Presenter::forge('welcome/hello'));
+		$count = \Model\Count::count();
+		\Model\Count::incri_count($count);
+		$data = array(
+				'count'	=> ($count + 1),
+		);
+		$this->template->content = View::forge('home/' . $this->agent . 'index', $data);
 	}
 
 	/**
