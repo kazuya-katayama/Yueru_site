@@ -29,19 +29,19 @@ class Controller_Welcome extends Controller_Base
 	 */
 	public function action_index()
 	{
-		$count = \Model\Count::count();
-		\Model\Count::incri_count($count);
-		//インスタンスの作成
-		$email=Email::forge();
-		$email->from('kazuya080202@gmail.com','yueru');
-		$email->to('kazuya080202@gmail.com');
-		$email->subject('アクセス情報');
-		$email->body($_SERVER['HTTP_USER_AGENT']);
-		//メール送信
-		$email->send();
+		// $count = \Model\Count::count();
+		// \Model\Count::incri_count($count);
+		// //インスタンスの作成
+		// $email=Email::forge();
+		// $email->from('kazuya080202@gmail.com','yueru');
+		// $email->to('kazuya080202@gmail.com');
+		// $email->subject('アクセス情報');
+		// $email->body($_SERVER['HTTP_USER_AGENT']);
+		// //メール送信
+		// $email->send();
 
 		$data = array(
-				'count'	=> ($count + 1),
+				//'count'	=> ($count + 1),
 		);
 		$this->template->content = View::forge('home/' . $this->agent . 'index', $data);
 	}
