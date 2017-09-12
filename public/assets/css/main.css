@@ -27,3 +27,34 @@ body {
   max-width: 800px; /* 最大幅 */
   min-width: 240px; /* 最小幅 */
 }
+/* ulリセット */
+.menu-, .menu-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+/* メニューを横並びに */
+.menu-case {
+  float: left;
+}
+.menu-:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+/* 子メニュー分の高さを除く */
+.menu-list {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  width: 10em;
+}
+/* 子メニューを表示 */
+.menu-name:hover + .menu-list, .menu-list:hover {
+  opacity: 1;
+  z-index: 1;
+}
+/* ホバー時、メニュー名の色変更 */
+.menu-case:hover .menu-name {
+  color: #507ea4;
+}
