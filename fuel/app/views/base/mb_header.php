@@ -16,7 +16,7 @@
         <?php } ?>
       </ul>
     <?php } else { ?>
-      <a href="/" class="non-line"><?php echo $cont_params['name']?></a>
+      <a href="/" class="non-line menu-name"><?php echo $cont_params['name']?></a>
     <?php } ?>
     </li>
     <?php } ?>
