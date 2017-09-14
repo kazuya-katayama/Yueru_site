@@ -7,18 +7,67 @@ html {
 
 body {
   background-color: #E0F2F7;
-  margin: 5px 10px 5px 5px;
-  font-size: 16px;
+  margin: 1px 5px 5px 5px;
+  font-size: 20px;
 }
 
 /*--header基本--*/
-.head-back1 {
+.header-top-group {
+  width: 100%;
+  height: 200px;
+}
+.head-img1 {
   width: 45%;
   height: 200px;
   background-repeat: no-repeat;
+  float: left;
 }
-.head-back2 {
-  width: 45%;
+.head-name {
+  width: 55%;
   height: 200px;
+  font-size:
   background-repeat: no-repeat;
+  float: left;
 }
+.header-menu-bar {
+  width: 100%;
+  height: 50px;
+  background-color: #b0c4de;
+  margin-top: 1px;
+}
+.header-menu-bar .menu- {
+  height: 50px;
+  font-size: 30px;
+}
+/* ulリセット */
+.menu-, .menu-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+/* メニューを横並びに */
+.menu-case {
+  float: left;
+}
+.menu-:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+/* 子メニュー分の高さを除く */
+.menu-list {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  width: 10em;
+}
+/* 子メニューを表示 */
+.menu-name:hover + .menu-list, .menu-list:hover {
+  opacity: 1;
+  z-index: 1;
+}
+/* ホバー時、メニュー名の色変更 */
+.menu-case:hover .menu-name {
+  color: #507ea4;
+}
+/*--/header基本--*/

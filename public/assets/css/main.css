@@ -3,30 +3,40 @@
 /*--基本--*/
 body {
   background-color: #E0F2F7;
-  margin: 0 10px 5px 5px;
+  margin: 1px 5px 5px 5px;
+  width: 100%;
 }
 
 /*--header基本--*/
+header {
+}
 .head-img-group {
-  width: 100%;
+  background-color: #6495ED;
+  width: 1335px;
   height: 150px;
-
 }
 .head-img1 {
-  width: 20%;
+  width: 230px;
   height: 150px;
   background-repeat: no-repeat;
-  max-width: 800px; /* 最大幅 */
-  min-width: 240px; /* 最小幅 */
+  float: left;
+
+}
+.head-name {
+  width: 770px;
+  height: 150px;
+  font-size: 20px;
+  color: blue;
+  background-color: white;
+  float: left;
+}
+.head-img2 {
+  width: 80%;
+  height: 150px;
+  background-repeat: no-repeat;
+  float: left;
 }
 
-.head-img2 {
-  width: 60%;
-  height: 150px;
-  background-repeat: no-repeat;
-  max-width: 800px; /* 最大幅 */
-  min-width: 240px; /* 最小幅 */
-}
 /* ulリセット */
 .menu-, .menu-list {
   list-style: none;
