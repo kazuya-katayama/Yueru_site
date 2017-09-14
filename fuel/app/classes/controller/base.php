@@ -30,10 +30,11 @@ class Controller_Base extends Controller_Template
 
     //ユーザーエージェント判別変数初期化
     $this->agent = (Agent::is_smartphone() || Agent::is_mobiledevice()) ? 'mb_' : '';
-
+//var_dump(Config::load('m_contents', 'contents'));
     //  受け渡す値
     $this->base_data = array(
-      'controller'          => Request::main()->uri->segment(1),    //現在の実行しているコントローラーの「Controller_」の後ろの名を取得
+      'controller'  => Request::main()->uri->segment(1),    //現在の実行しているコントローラーの「Controller_」の後ろの名を取得
+      'contents'    => Config::load('m_contents', 'contents'),
     );
   }
 

@@ -8,23 +8,23 @@ html {
 body {
   background-color: #E0F2F7;
   margin: 1px 5px 5px 5px;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 /*--header基本--*/
 .header-top-group {
   width: 100%;
-  height: 250px;
+  height: 300px;
 }
 .head-img1 {
   width: 45%;
-  height: 250px;
+  height: 300px;
   background-repeat: no-repeat;
   float: left;
 }
 .head-name {
   width: 55%;
-  height: 250px;
+  height: 300px;
   font-size:
   background-repeat: no-repeat;
   float: left;
@@ -35,19 +35,19 @@ body {
   background-color: #b0c4de;
   margin-top: 2px;
 }
-.header-menu-bar .menu- {
-  height: 100px;
-  font-size: 35px;
-}
 /* ulリセット */
-.menu-, .menu-list {
+.header-menu-bar .menu-, .menu-list {
   list-style: none;
   padding-left: 0;
   margin: 0;
+  font-size: 36px;
 }
 /* メニューを横並びに */
 .menu-case {
+  width: 20%;
+  height: 100px;
   float: left;
+  text-align: center;
 }
 .menu-:after {
   content: "";
@@ -59,7 +59,8 @@ body {
   position: absolute;
   opacity: 0;
   z-index: -1;
-  width: 10em;
+  width: 20%;
+  background-color: #708090;
 }
 /* 子メニューを表示 */
 .menu-name:hover + .menu-list, .menu-list:hover {
@@ -69,5 +70,52 @@ body {
 /* ホバー時、メニュー名の色変更 */
 .menu-case:hover .menu-name {
   color: #507ea4;
+  background-color: #87ceeb;
+  height: 100px;
 }
 /*--/header基本--*/
+
+
+/*--共通基本--*/
+.non-line {
+  text-decoration: none;
+}
+/*--/共通基本--*/
+@charset "utf-8";
+
+#contents {
+  z-index: 0;
+  font-size: 16px;
+}
+.page-txt {
+  margin: 30px 0 0;
+  height: 2000px;
+}
+#modal-open {
+  color: #cc0000;
+}
+
+/* モーダル コンテンツエリア */
+#modal-main {
+  display: none;
+  z-index: 3;
+  width: 93%;
+  height: 300px;
+  margin: 0;
+  padding: 0;
+  position:fixed;
+  background-color: #ffffff;
+  color: #666666;
+}
+
+/* モーダル 背景エリア */
+#modal-bg {
+  display:none;
+  width:100%;
+  height:130%;
+  background-color:rgba(0,0,0, 0.50);
+  position:fixed;
+  top:0;
+  left:0;
+  z-index: 2;
+}
