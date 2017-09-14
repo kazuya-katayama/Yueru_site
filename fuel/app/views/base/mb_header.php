@@ -1,5 +1,5 @@
 <div class="header-top-group">
-  <img src='assets/img/sirayuki.jpg' class="head-img1"/>
+  <img src='/assets/img/sirayuki.jpg' class="head-img1"/>
   <div class="head-name">ゆえるのサイト ここの画像募集中及び作成中</div>
 </div>
 <div class="header-menu-bar">

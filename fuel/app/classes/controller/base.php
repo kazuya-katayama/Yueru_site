@@ -1,7 +1,5 @@
 <?php
 /**
-  * @package    Fuel
-  * @version    1.9
   * @package    app
   * @extends    Controller_Template
   */
@@ -13,14 +11,14 @@ class Controller_Base extends Controller_Template
   public $agent               = '';   //ユーザーエージェント識別
   public $controller          = '';   //コントローラー名
   public $action              = '';   //アクション名
-  public $base_data = array();
-  public $view_front_data = array();
+  public $base_data = array();        //受け渡す値
+  public $view_front_data = array();  //後で受け渡し値
 
   /**
-  * @access  public
-  * @return
-  * メインが処理される前にする処理
-  */
+   * @access  public
+   * @return
+   * メインが処理される前にする処理
+   */
   public function before()
   {
     parent::before();
@@ -30,25 +28,25 @@ class Controller_Base extends Controller_Template
 
     //ユーザーエージェント判別変数初期化
     $this->agent = (Agent::is_smartphone() || Agent::is_mobiledevice()) ? 'mb_' : '';
-//var_dump(Config::load('m_contents', 'contents'));
+
     //  受け渡す値
     $this->base_data = array(
-      'controller'  => Request::main()->uri->segment(1),    //現在の実行しているコントローラーの「Controller_」の後ろの名を取得
-      'contents'    => Config::load('m_contents', 'contents'),
+      'controller'  => Request::main()->uri->segment(1),        //現在の実行しているコントローラーの「Controller_」の後ろの名を取得
+      'contents'    => Config::load('m_contents', 'contents'),  //メニュータブの作成に設定ファイルの読み込み
     );
   }
 
   public function after($response)
   {
-    //header.phpをテンプレートの$headerとbindさせる。
+    //header.phpをテンプレートの$headerとbind
     $this->template->header = View::forge('base/' . $this->agent . 'header', $this->base_data);
-    //metas.phpをテンプレートの$metasとbindさせる。
+    //metas.phpをテンプレートの$metasとbind
     $this->template->metas = View::forge('base/' . $this->agent . 'metas', $this->base_data);
     if ($this->agent == '') {
-      //footer.phpをテンプレートの$side_menuとbindさせる。
+      //footer.phpをテンプレートの$side_menuとbind
       $this->template->side_menu = View::forge('base/' . $this->agent . 'side_menu', $this->base_data);
     }
-    //footer.phpをテンプレートの$footerとbindさせる。
+    //footer.phpをテンプレートの$footerとbind
     $this->template->footer = View::forge('base/' . $this->agent . 'footer', $this->base_data);
 
     $response = parent::after($response);
