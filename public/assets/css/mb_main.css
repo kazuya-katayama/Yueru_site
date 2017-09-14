@@ -14,30 +14,30 @@ body {
 /*--header基本--*/
 .header-top-group {
   width: 100%;
-  height: 200px;
+  height: 250px;
 }
 .head-img1 {
   width: 45%;
-  height: 200px;
+  height: 250px;
   background-repeat: no-repeat;
   float: left;
 }
 .head-name {
   width: 55%;
-  height: 200px;
+  height: 250px;
   font-size:
   background-repeat: no-repeat;
   float: left;
 }
 .header-menu-bar {
   width: 100%;
-  height: 50px;
+  height: 100px;
   background-color: #b0c4de;
-  margin-top: 1px;
+  margin-top: 2px;
 }
 .header-menu-bar .menu- {
-  height: 50px;
-  font-size: 30px;
+  height: 100px;
+  font-size: 35px;
 }
 /* ulリセット */
 .menu-, .menu-list {
