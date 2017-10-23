@@ -22,3 +22,40 @@
     <?php } ?>
   </ul>
 </div>
+<div id="loader-bg">
+  <div id="loader">
+    <p>Now Loading...</p>
+    <?php $loader_img = array("chiya","cocoa","rize","syaro","tino");?>
+    <img src="/assets/img/neon_<?php echo $loader_img[rand(0,count($loader_img) -1 )];?>.jpeg" alt="Now Loading..." />
+    <p>Now Loading...</p>
+  </div>
+</div>
+<div id="wrap">
+  ロード後に表示させたい内容
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(function() {
+  var h = $(window).height();
+
+  $('#wrap').css('display','none');
+  $('#loader-bg ,#loader').height(h).css('display','block');
+});
+
+$(window).load(function () { //全ての読み込みが完了したら実行
+  $('#loader-bg').delay(900).fadeOut(800);
+  $('#loader').delay(600).fadeOut(300);
+  $('#wrap').css('display', 'block');
+});
+
+//10秒たったら強制的にロード画面を非表示
+$(function(){
+  setTimeout('stopload()',10000);
+});
+
+function stopload(){
+  $('#wrap').css('display','block');
+  $('#loader-bg').delay(900).fadeOut(800);
+  $('#loader').delay(600).fadeOut(300);
+}
+</script>
