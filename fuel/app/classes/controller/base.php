@@ -38,10 +38,12 @@ class Controller_Base extends Controller_Template
 
   public function after($response)
   {
-    //header.phpをテンプレートの$headerとbind
-    $this->template->header = View::forge('base/' . $this->agent . 'header', $this->base_data);
     //metas.phpをテンプレートの$metasとbind
     $this->template->metas = View::forge('base/' . $this->agent . 'metas', $this->base_data);
+    //header.phpをテンプレートの$headerとbind
+    $this->template->header = View::forge('base/' . $this->agent . 'header', $this->base_data);
+    //header_menu.phpをテンプレートの$headerとbind
+    $this->template->header_menu = View::forge('base/' . $this->agent . 'header_menu', $this->base_data);
     if ($this->agent == '') {
       //footer.phpをテンプレートの$side_menuとbind
       $this->template->side_menu = View::forge('base/' . $this->agent . 'side_menu', $this->base_data);
