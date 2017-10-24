@@ -6,8 +6,8 @@
 <div id="loader-bg">
   <div id="loader">
     <p>Now Loading...</p>
-    <?php $loader_img = array("chiya","cocoa","rize","syaro","tino");?>
-    <img src="/assets/img/neon_<?php echo $loader_img[rand(0,count($loader_img) -1 )];?>.jpeg" alt="Now Loading..." />
+    <?php $loading_img = Config::load('m_loading_img', 'loading_img');?>
+    <img src="/assets/img/<?php echo $loading_img[rand(0,count($loading_img) -1 )];?>" alt="Now Loading..." />
     <p>Now Loading...</p>
   </div>
 </div>
