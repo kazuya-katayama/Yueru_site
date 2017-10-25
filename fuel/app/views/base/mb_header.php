@@ -5,12 +5,9 @@
 
 <div id="loader-bg">
   <div id="loader">
-    <p>Now Loading...</p>
+    <p class="now_loding">Now Loading...</p>
     <?php $loading_img = Config::load('m_loading_img', 'loading_img');?>
     <img src="/assets/img/<?php echo $loading_img[rand(0,count($loading_img) -1 )];?>" alt="Now Loading..." />
-    <p>Now Loading...</p>
+    <p class="now_loding">Now Loading...</p>
   </div>
-</div>
-<div id="wrap">
-  ロード後に表示させたい内容
 </div>
