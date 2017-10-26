@@ -94,7 +94,7 @@ body {
 /*--/共通基本--*/
 @charset "utf-8";
 
-#contents {
+.contents {
   z-index: 0;
   font-size: 16px;
 }

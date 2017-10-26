@@ -1,4 +1,4 @@
-<title>ゆえるのサイト</title>
+<title>ゆえるのサイト<?php if(isset($base_params['title'])) echo " " . $base_params['title'];?></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="description" content="">
 <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico" />

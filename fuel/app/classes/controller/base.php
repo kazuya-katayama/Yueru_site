@@ -11,8 +11,8 @@ class Controller_Base extends Controller_Template
   public $agent               = '';   //ユーザーエージェント識別
   public $controller          = '';   //コントローラー名
   public $action              = '';   //アクション名
-  public $base_data = array();        //受け渡す値
-  public $view_front_data = array();  //後で受け渡し値
+  public $base_data = array();        //baseの受け渡す値（固定）
+  public $view_front_data = array();  //受け渡し値（ページごとに可変）
 
   /**
    * @access  public
@@ -29,15 +29,22 @@ class Controller_Base extends Controller_Template
     //ユーザーエージェント判別変数初期化
     $this->agent = (Agent::is_smartphone() || Agent::is_mobiledevice()) ? 'mb_' : '';
 
+  }
+
+  /**
+   * @access  public
+   * @return
+   * メインが処理された後にする処理
+   */
+  public function after($response)
+  {
     //  受け渡す値
     $this->base_data = array(
       'controller'  => Request::main()->uri->segment(1),        //現在の実行しているコントローラーの「Controller_」の後ろの名を取得
       'contents'    => Config::load('m_contents', 'contents'),  //メニュータブの作成に設定ファイルの読み込み
+      'base_params' => $this->view_front_data,
     );
-  }
 
-  public function after($response)
-  {
     //metas.phpをテンプレートの$metasとbind
     $this->template->metas = View::forge('base/' . $this->agent . 'metas', $this->base_data);
     //header.phpをテンプレートの$headerとbind
