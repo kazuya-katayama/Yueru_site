@@ -11,9 +11,9 @@
           </li>
         <?php } ?>
       </ul>
-    <?php } else { ?>
-      <a href="/" class="non-line menu-name"><?php echo $cont_params['name']?></a>
-    <?php } ?>
+      <?php } else { ?>
+        <a href="/" class="non-line menu-name"><?php echo $cont_params['name']?></a>
+      <?php } ?>
     </li>
     <?php } ?>
   </ul>
