@@ -15,11 +15,15 @@
     <!--container-->
     <div class="continer">
       <!--header-->
+      <header>
+        <p>
+          404 not found
+        </p>
+      </header>
       <!--//header-->
       <!--main_contents-->
       <div class="contents">
-        ごめんなさい
-      
+        <img src='/assets/img/annaka_e-1.jpg' class="head-img1"/>
       </div>
       <!--main_contents-->
       <!--footer-->
