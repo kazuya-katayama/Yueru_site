@@ -5,10 +5,9 @@
     <title>404 のっと ふぁうんど！！</title>
     <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico" />
     <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
-    <link rel="stylesheet" href="/assets/css/mb_main.css">
+    <link rel="stylesheet" href="/assets/css/error/404.css">
     <script src="/assets/js/jquery-3.2.1.min.js"></script>
-    <script src="/assets/js/jquery-1.11.1.min.js"></script>
-    <script src="/assets/js/base.js"></script>
+
     <!--//metas-->
   </head>
   <body>
@@ -16,9 +15,7 @@
     <div class="continer">
       <!--header-->
       <header>
-        <p>
-          404 not found
-        </p>
+        <p class="not_found">404 not found</p>
       </header>
       <!--//header-->
       <!--main_contents-->
