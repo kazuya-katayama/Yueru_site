@@ -6,7 +6,6 @@
 html {
   height: 100%;
 }
-
 body {
   height: 100%;
   background-color: #e0f7ee;
@@ -20,10 +19,20 @@ header {
 }
 .not_found {
   font-size: 60px;
-
 }
+
 /*--contents基本--*/
 .contents {
   z-index: 0;
-  font-size: 16px;
+  font-size: 35px;
+  text-align: center;
+}
+.info_text p {
+  margin: 0;
+}
+.link {
+  font-size: 35px;
+  color: #9A2EFE;
+  text-align: center;
+  text-decoration: underline
 }

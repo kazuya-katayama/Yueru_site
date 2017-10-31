@@ -7,7 +7,6 @@
     <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
     <link rel="stylesheet" href="/assets/css/error/404.css">
     <script src="/assets/js/jquery-3.2.1.min.js"></script>
-
     <!--//metas-->
   </head>
   <body>
@@ -20,7 +19,17 @@
       <!--//header-->
       <!--main_contents-->
       <div class="contents">
-        <img src='/assets/img/annaka_e-1.jpg' class="head-img1"/>
+        <div class="info_text">
+          <p>申し訳ございません。</p>
+          <p>お探しのページは見つけることができませんでした。</p>
+        </div>
+        <div>
+          <a class="link" onclick="history.back()">>戻る<</a>
+        </div>
+        <img src='/assets/img/404/<?php echo $img;?>' />
+        <div>
+          <a class="link" href="/">>TOPに戻る<</a>
+        </div>
       </div>
       <!--main_contents-->
       <!--footer-->
