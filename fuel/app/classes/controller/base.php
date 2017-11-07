@@ -57,7 +57,6 @@ class Controller_Base extends Controller_Template
     }
     //footer.phpをテンプレートの$footerとbind
     $this->template->footer = View::forge('base/' . $this->agent . 'footer', $this->base_data);
-
     $response = parent::after($response);
     return $response;
   }
