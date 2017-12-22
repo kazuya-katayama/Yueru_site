@@ -19,9 +19,10 @@ return array(
   5 => array(
     'name' => '運営',
     'cont' => array(
-      'お知らせ'      => 'site/notice',
-      'お問合せ'      => 'site/inquiry',
-      'サイトについて' => 'site/detail',
+      'お知らせ'        => 'site/notice',
+      'お問合せ'        => 'site/inquiry',
+      'サイトについて'   => 'site/detail',
+      '会社情報'        => 'https://company.yueru.jp',
     ),
   ),
 );
