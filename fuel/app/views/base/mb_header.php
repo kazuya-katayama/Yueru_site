@@ -6,8 +6,8 @@
 <div id="loader-bg">
   <div id="loader">
     <p class="now_loding">Now Loading...</p>
-    <?php $loading_img = Config::load('m_loading_img', 'loading_img');?>
-    <img src="/assets/img/<?php echo $loading_img[rand(0,count($loading_img) -1 )];?>" alt="Now Loading..." />
+    <?php $now_loading = Config::load('m_now_loading', 'loading_img');?>
+    <img src="/assets/img/loading/<?php echo $now_loading[rand(0,count($now_loading) -1 )];?>" alt="Now Loading..." />
     <p class="now_loding">Now Loading...</p>
   </div>
 </div>
