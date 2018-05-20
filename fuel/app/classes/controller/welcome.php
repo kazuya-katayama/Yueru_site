@@ -6,6 +6,11 @@
 class Controller_Welcome extends Controller_Base
 {
 
+	/**
+		* @access  public
+		* @return  Response
+		* TOP画面
+		*/
 	public function action_index()
 	{
 		//受け渡す値の設定
