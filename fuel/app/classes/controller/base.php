@@ -40,9 +40,9 @@ class Controller_Base extends Controller_Template
   {
     //  受け渡す値
     $this->base_data = array(
-      'controller'  => Request::main()->uri->segment(1),        //現在の実行しているコントローラーの「Controller_」の後ろの名を取得
-      'contents'    => Config::load('m_contents', 'contents'),  //メニュータブの作成に設定ファイルの読み込み
-      'base_params' => $this->view_front_data,
+      'controller'          => Request::main()->uri->segment(1),                       //現在の実行しているコントローラーの「Controller_」の後ろの名を取得
+      'header_contents'     => Config::load('m_header_contents', 'header_contents'),   //メニュータブの作成に設定ファイルの読み込み
+      'base_params'         => $this->view_front_data,                                 //画面ごとに使用する
     );
 
     //metas.phpをテンプレートの$metasとbind

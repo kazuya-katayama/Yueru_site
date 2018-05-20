@@ -54,13 +54,6 @@ body {
   height: 100px;
   float: left;
   text-align: center;
-  /*border:solid #00ffff;
-  border-width:2px 0px 2px 0px;*/
-}
-.menu-:after {
-  content: "";
-  clear: both;
-  display: block;
 }
 /* 子メニュー分の高さを除く */
 .menu-list {
@@ -73,12 +66,11 @@ body {
 /* 子メニューを表示 */
 .menu-name:hover + .menu-list, .menu-list:hover {
   opacity: 1;
-  z-index: 1;
+
 }
 /* ホバー時、メニュー名の色変更 */
 .menu-case:hover .menu-name {
-  color: #507ea4;
-  background-color: #87ceeb;
+  background-color: #98fb98;
   height: 70px;
 }
 .menu-name {
@@ -88,6 +80,7 @@ body {
   vertical-align: middle;
   padding: 15px 0px 15px 0px;
   display: table-cell;
+  color: green;
 }
 /*--/header基本--*/
 
@@ -101,8 +94,3 @@ body {
 .contents {
   z-index: 0;
   font-size: 16px;
-}
-.page-txt {
-  margin: 30px 0 0;
-  height: 2000px;
-}

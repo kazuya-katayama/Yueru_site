@@ -1,6 +1,6 @@
 <div class="header-menu-bar">
   <ul class="menu-">
-    <?php foreach($contents as $cont_params) {?>
+    <?php foreach($header_contents as $cont_params) {?>
     <li class="menu-case">
       <?php if(isset($cont_params['cont'])) { ?>
       <div class="menu-name"><?php echo $cont_params['name']?></div>
@@ -18,7 +18,20 @@
     <?php } ?>
   </ul>
 </div>
-
+<script>
+$(function() {
+    $(".menu-case ul").css("display","none");
+    $(".menu-case div").click(function(){
+      if ($(this).css("display") == 'block') {
+        $(this).toggleClass("close").next().slideToggle("fast");
+        $(".menu-case ul").css("display","none");
+      } else {
+        $(".menu-case ul").css("display","none");
+        $(this).toggleClass("open").next().slideToggle("fast");
+      }
+    });
+});
+</script>
 <script>
 $(function(){
 	var glovalHeader = $('.header-menu-bar');　//　グローバルナビゲーションのセレクタ
