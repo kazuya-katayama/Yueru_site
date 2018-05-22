@@ -94,3 +94,9 @@ body {
 .contents {
   z-index: 0;
   font-size: 16px;
+}
+#pagetop {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+}
