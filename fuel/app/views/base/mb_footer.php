@@ -1,22 +1,22 @@
 <?php $top_anchor = Config::load('m_top_anchor', 'top_anchor');	//top_anchor画像の一覧を取得?>
-<p id="pagetop"><a href="#site_top"><img src="/assets/img/top_anchor/<?php echo $top_anchor[rand(0,count($top_anchor) -1 )];?>" height="70" width="70" alt="ページトップ"></a></p>
+<p id="pagetop_anchor"><a href="#site_top"><img src="/assets/img/top_anchor/<?php echo $top_anchor[rand(0,count($top_anchor) -1 )];?>" height="140" width="220" alt="ページトップ"></a></p>
 <script>
 	$(function(){
     	// 「ページトップへ戻るボタン」の要素を隠します
-    	$('#pagetop').hide();
+    	$('#pagetop_anchor').hide();
     	// スクロールした場合のアクションが記されています
     	$(window).scroll(function(){
         	// スクロール位置が200pxを超えた場合に「ページトップへ戻るボタン」をフェードインで出現させる
         	if ($(this).scrollTop() &gt; 200) {
-            	$('#pagetop').fadeIn();
+            	$('#pagetop_anchor').fadeIn();
         	}
         	// スクロール位置が200px以下の場合は「ページトップへ戻るボタン」を消しておく（フェードアウトで消える）
         	else {
-            	$('#pagetop').fadeOut();
+            	$('#pagetop_anchor').fadeOut();
         	}
     	});
     	// 「ページトップへ戻るボタン」をクリックした場合のページトップへ戻るスピードの速さが記されています
-    	$('#pagetop').click(function(){
+    	$('#pagetop_anchor').click(function(){
         	$('html,body').animate({
             	scrollTop: 0 }, 500);
         	return false;

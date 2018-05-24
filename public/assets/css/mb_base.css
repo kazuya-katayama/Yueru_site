@@ -84,6 +84,13 @@ body {
 }
 /*--/header基本--*/
 
+/*--top_anchor--*/
+#pagetop_anchor {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+}
+/*--/top_anchor--*/
 
 /*--共通基本--*/
 .non-line {
@@ -94,9 +101,4 @@ body {
 .contents {
   z-index: 0;
   font-size: 16px;
-}
-#pagetop {
-    position: fixed;
-    bottom: 50px;
-    right: 30px;
 }
