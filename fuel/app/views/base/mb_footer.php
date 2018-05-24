@@ -1,4 +1,5 @@
-<p id="pagetop"><a href="#site_top"><img src="images/img_pagetop.png" height="70" width="70" alt="ページトップボタン"></a></p>
+<?php $top_anchor = Config::load('m_top_anchor', 'top_anchor');	//top_anchor画像の一覧を取得?>
+<p id="pagetop"><a href="#site_top"><img src="/assets/img/top_anchor/<?php echo $top_anchor[rand(0,count($top_anchor) -1 )];?>" height="70" width="70" alt="ページトップ"></a></p>
 <script>
 	$(function(){
     	// 「ページトップへ戻るボタン」の要素を隠します
